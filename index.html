@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enemyfying Assessment</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            line-height: 1.6;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #081F5D;
+            border-bottom: 3px solid #0064F0;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #081F5D;
+            margin-top: 30px;
+        }
+        .intro {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-left: 4px solid #0064F0;
+            margin-bottom: 30px;
+            border-radius: 5px;
+        }
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #081F5D;
+        }
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #0064F0;
+        }
+        textarea {
+            min-height: 100px;
+            resize: vertical;
+            font-family: inherit;
+        }
+        .helper-text {
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: 5px;
+            font-style: italic;
+        }
+        button {
+            background-color: #0064F0;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #081F5D;
+        }
+        .hidden {
+            display: none;
+        }
+        .quote {
+            font-style: italic;
+            color: #555;
+            margin: 15px 0;
+            padding-left: 20px;
+            border-left: 3px solid #95a5a6;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+            }
+            button {
+                display: none;
+            }
+            .section {
+                page-break-inside: avoid;
+                background-color: white;
+            }
+            .hidden {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Enemyfying Assessment</h1>
+        
+        <div class="intro">
+            <p><strong>Inspired by <a href="https://www.penguinrandomhouse.com/authors/2169793/adam-kahane/" target="_blank" style="color: #0064F0; text-decoration: none; border-bottom: 1px solid #0064F0;">Adam Kahane's</a> "Collaborating with the Enemy" (2025)</strong></p>
+            <p>This assessment will help you explore how you might be contributing to adversarial dynamics with someone in your work or life. Through honest self-reflection, you'll discover how much of the "enemy" narrative is of your own making.</p>
+        </div>
+
+        <!-- Section 1: Identification -->
+        <div class="section" id="section1">
+            <h2>Part 1: Identifying Your "Enemy"</h2>
+            
+            <p style="margin-bottom: 20px;">Before we begin, take a moment to think about someone you are working with or need to work with that you <strong>don't like, don't trust, or don't agree with</strong>.</p>
+            
+            <p style="margin-bottom: 15px;">Consider:</p>
+            <ul style="margin-bottom: 20px; line-height: 1.8;">
+                <li>Who is this person?</li>
+                <li>What is your relationship with them?</li>
+                <li>In what context do you need to work together?</li>
+                <li>What are your initial feelings about this person?</li>
+            </ul>
+
+            <p style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border-left: 4px solid #0064F0;">
+                <strong>Hold this person in mind as you work through the following reflections.</strong> The goal is to explore how much you might be contributing to the adversarial dynamic between you.
+            </p>
+
+            <button onclick="showSection2()">Start Enemyfying Assessment →</button>
+        </div>
+
+        <!-- Section 2: Notice the Narrative -->
+        <div class="section hidden" id="section2">
+            <h2>Part 2: Notice the Narrative You Have About This Person</h2>
+            <p class="quote">"Blaming others is a common and lazy way to avoid doing our own work." — Adam Kahane</p>
+            
+            <div style="margin-bottom: 30px;">
+                <label for="whyDontLike">Write out why you don't like, trust, or agree with this person:</label>
+                <textarea id="whyDontLike" placeholder="Be completely honest with yourself. What bothers you about them? What have they done or said? Why does working with them feel difficult?" style="min-height: 150px;"></textarea>
+                <p class="helper-text">This is for your eyes only. Be raw and honest about your feelings.</p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <label>Now, check ALL statements below that feel true to you when you think about this person:</label>
+                <p class="helper-text" style="margin-bottom: 20px;">Be honest with yourself. There are no right or wrong answers.</p>
+                
+                <div style="background-color: white; padding: 20px; border-radius: 5px;">
+                    <!-- Randomized order -->
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I feel tense, defensive, or vigilant when interacting with them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I use fixed labels to describe them (e.g., "toxic," "selfish," "incompetent," "unsafe")
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I treat disagreement as evidence of ill intent rather than difference in perspective
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        I tell myself a consistent story about who they are that leaves little room for nuance
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I replay interactions looking for proof that I was right to distrust them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I believe the conflict would resolve if they simply behaved differently
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I assume that if they had the same information as me, they would agree
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I stop being curious about their inner world
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I assume they have bad or hostile intentions toward me (even when their actions could be interpreted differently)
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I assume I need to guard information, emotions, or intentions around them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I believe "if they really cared, they would..." and use that as proof against them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I believe this behavior reflects their true character
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        I feel a sense of certainty or relief in having "figured them out"
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I see myself as acting in good faith and them as acting in bad faith
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I justify my own defensiveness as a reasonable response to their behavior
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I believe their mistakes are intentional rather than accidental
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I feel less empathy for their stress, constraints, or pressures
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I interpret disagreement as a threat rather than a normal relational tension
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I interpret ambiguous situations involving them in the most negative way
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I assume they behave this way across all contexts and relationships
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        New information is interpreted to fit the existing story
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I believe my position is more rational, ethical, or values-aligned than theirs
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I focus on what they need to change rather than what I might need to change
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I assume they are trying to "win" rather than trying to solve a problem
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I assume I already understand their motivations
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I rehearse conversations in advance to protect myself
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I discount or minimize moments when they act reasonably or kindly
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I attribute their behavior to who they are rather than the situation they're in
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        I repeat the same story about them to others or internally
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I view compromise as me "giving in" rather than mutual adjustment
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I rarely ask how my actions might contribute to the dynamic
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I believe they are acting out of spite, ego, or malice rather than confusion, fear, or constraint
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I talk about them in ways that flatten complexity (to myself or others)
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I believe they could harm my reputation, work, or standing if given the chance
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I treat neutral behaviors as passive-aggressive
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I believe they are unlikely or unable to change
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        I feel resistant to evidence that complicates my view
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I frame the situation as "right vs. wrong" rather than "competing values or constraints"
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I see my reactions as proportional and theirs as excessive
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="A"> 
+                        I assume they are more strategic or manipulative than evidence actually supports
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I reduce them to a single trait or pattern
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="E"> 
+                        I avoid vulnerability or openness because it feels unsafe with them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="C"> 
+                        I assume silence, delay, or brevity is intentional disrespect
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="B"> 
+                        I selectively notice evidence that confirms my existing view of them
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="H"> 
+                        Letting go of the story feels disorienting or unsafe
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="D"> 
+                        I believe my frustration is evidence of their failure rather than mutual misalignment
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="F"> 
+                        I believe repair is primarily their responsibility
+                    </label>
+                    
+                    <label style="display: block; margin-bottom: 12px; font-weight: normal; padding: 10px; background-color: #f8f9fa; border-radius: 5px;">
+                        <input type="checkbox" class="pattern-checkbox" data-category="G"> 
+                        I no longer imagine future versions of them that behave differently
+                    </label>
+                </div>
+            </div>
+
+            <button onclick="showResults()" style="margin-top: 30px; background-color: #DC143C; font-size: 18px; padding: 15px 40px;">See Your Enemyfying Pattern →</button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="section hidden" id="resultsSection">
+            <h2>Your Enemyfying Pattern Analysis</h2>
+            
+            <!-- Overall Intensity -->
+            <div style="margin-bottom: 30px; padding: 25px; background: linear-gradient(to bottom, #fff, #ffe6e6); border-radius: 8px; border: 2px solid #ddd;">
+                <h3 style="color: #081F5D; margin-top: 0;">Overall Enemyfying Intensity</h3>
+                <div style="position: relative; height: 40px; background: linear-gradient(to right, #90EE90, #FFD700, #FFA500, #FF6347, #DC143C); border-radius: 20px; margin: 20px 0;">
+                    <div id="overallMarker" style="position: absolute; top: -5px; width: 4px; height: 50px; background-color: #081F5D; transition: left 0.3s ease; left: 0%;"></div>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600;">
+                    <span style="color: #228B22;">Minimal</span>
+                    <span style="color: #DC143C;">Intense</span>
+                </div>
+                <div id="overallMessage" style="margin-top: 20px; padding: 15px; background-color: white; border-radius: 5px;"></div>
+            </div>
+
+            <!-- Category Breakdown -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #081F5D;">Where Your Enemyfying Shows Up</h3>
+                <p style="margin-bottom: 20px;">Here's how your narrative patterns break down across different categories:</p>
+                <div id="categoryBreakdown"></div>
+            </div>
+
+            <button onclick="showSection3()" style="margin-top: 30px;">Continue to Next Reflection →</button>
+        </div>
+
+        <!-- Section 3: Shift Perspective -->
+        <div class="section hidden" id="section3">
+            <h2>Part 3: Shift Perspective</h2>
+            <p class="quote">"The only element we can directly control is our own behavior. When you change your participation, it creates ripple effects." — Adam Kahane</p>
+            
+            <p style="margin-bottom: 30px;">Based on your enemyfying patterns, here are some targeted reflections to help you disrupt the narrative you've been holding:</p>
+            
+            <div id="personalizedPrompts"></div>
+
+            <button onclick="showConclusion()" style="margin-top: 30px;">Complete Assessment →</button>
+        </div>
+
+        <!-- Conclusion Section -->
+        <div class="section hidden" id="conclusionSection">
+            <h2>Moving Forward</h2>
+            
+            <div style="background-color: #f0f7ff; padding: 25px; border-radius: 8px; border-left: 4px solid #0064F0; margin-bottom: 30px;">
+                <h3 style="color: #081F5D; margin-top: 0;">Remember</h3>
+                <p style="margin-bottom: 15px;">Recognizing how you've been "enemyfying" someone is not about blaming yourself or taking full responsibility. It's about:</p>
+                <ul style="line-height: 1.8;">
+                    <li>Recognizing your power to change the dynamic</li>
+                    <li>Understanding that you can only control your own behavior</li>
+                    <li>Taking responsibility for how the stories we tell ourself about others can distort our perceptions and constrain our willingness to collaborate</li>
+                    <li>Opening up possibilities for collaboration that seemed impossible by shifting our perspective</li>
+                </ul>
+            </div>
+
+            <div style="background-color: #fff; padding: 25px; border-radius: 8px; border: 2px solid #ddd;">
+                <h3 style="color: #081F5D; margin-top: 0;">Next Steps</h3>
+                <p style="margin-bottom: 15px;">Consider these actions as you move forward:</p>
+                <ol style="line-height: 1.8;">
+                    <li><strong>Notice your patterns</strong> - When you catch yourself in one of your enemyfying patterns, simply notice it</li>
+                    <li><strong>Ask questions rather than making assumptions; practice empathetic listening</strong></li>
+                    <li><strong>Focus on what you can change</strong> - Not on changing them, but on changing your own participation</li>
+                    <li><strong>IF you choose to engage in stretch collaboration, experiment with one small, different action in your next interaction.</strong> Upcoming sessions will introduce additional responses and stretch collaboration practices to try.</li>
+                </ol>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #081F5D, #0064F0); border-radius: 8px; color: white;">
+                <h3 style="margin-top: 0; color: white;">Print/Save Assessment Results</h3>
+                <p style="margin-bottom: 20px; font-size: 16px;">Save your results for future reference.</p>
+                <button onclick="window.print()" style="background-color: white; color: #081F5D; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; margin: 0 10px;">Print Results</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        // Category definitions
+        const categories = {
+            'A': {
+                name: 'Intent & Motive Attribution',
+                description: 'Assuming hostile intentions, mind-reading, attributing malice',
+                total: 6,
+                disruptionPrompt: 'If you were responsible for understanding—not judging—their behavior, what hypotheses would you test?',
+                disruptionHelper: 'Leaders look for constraints, incentives, pressures, and blind spots before concluding intent.'
+            },
+            'B': {
+                name: 'Character Fixation & Dispositional Bias',
+                description: 'Attributing behavior to fixed character traits rather than situations',
+                total: 6,
+                disruptionPrompt: 'If you were leading this person, how would you diagnose the system around them before diagnosing their character?',
+                disruptionHelper: 'Leaders examine structure, incentives, role clarity, workload, and decision rights before attributing behavior to disposition.'
+            },
+            'C': {
+                name: 'Interpretive Narrowing',
+                description: 'Interpreting ambiguous situations negatively, confirmation bias',
+                total: 6,
+                disruptionPrompt: 'What assumptions are you making in your initial interpretation of you and this person engage with each other? Which elements are observable facts, and which are inferred meaning?',
+                disruptionHelper: 'Separating data from interpretation often reveals where meaning has been added. Leaders slow interpretation when information is incomplete.'
+            },
+            'D': {
+                name: 'Moral & Relational Polarization',
+                description: 'Believing you\'re right and they\'re wrong, moral superiority',
+                total: 6,
+                disruptionPrompt: 'What polarity might you be holding as a problem to be solved rather than a tension to be managed? What values or strengths might each of you be bringing on opposite ends of the same polarity?',
+                disruptionHelper: 'Consider: Naming the polarity shifts the conversation from moral judgment to seeing possible shared purpose or stewardship.'
+            },
+            'E': {
+                name: 'Threat & Safety Framing',
+                description: 'Perceiving them as a threat, feeling defensive or unsafe',
+                total: 6,
+                disruptionPrompt: 'What might change if, in one low-stakes interaction, you temporarily suspended the assumption that this person is a threat? How might that alter what you say, ask, or withhold?',
+                disruptionHelper: 'Consider a small, bounded experiment—perhaps engaging with them to practice transformative listening—one that preserves your safety while testing whether your current threat assessment is accurate.'
+            },
+            'F': {
+                name: 'Responsibility Displacement',
+                description: 'Focusing on their need to change rather than your own',
+                total: 6,
+                disruptionPrompt: 'If you assume this person may not change, what is one specific way you could alter your own behavior, expectations, or responses to shift the dynamic?',
+                disruptionHelper: 'Focus on actions within your control—how you show up, what you reinforce, what you tolerate, and what you choose to do differently regardless of their response.'
+            },
+            'G': {
+                name: 'Dehumanization & Reduction',
+                description: 'Reducing them to a single trait, losing curiosity and empathy',
+                total: 6,
+                disruptionPrompt: 'What aspects of this person\'s experience remain unknown to you? If you were practicing empathetic listening—not to agree or fix, but to understand—what might you listen for?',
+                disruptionHelper: 'Consider listening for what they care about, what pressures they are navigating, what they may feel responsible for, and what they might be protecting—rather than listening for points to rebut or correct.'
+            },
+            'H': {
+                name: 'Narrative Lock-In',
+                description: 'Holding a fixed story about them that resists new information',
+                total: 6,
+                disruptionPrompt: 'What story are you telling about who they are—and how tightly are you holding it?',
+                disruptionHelper: 'Stories create coherence, yet leadership requires the willingness to update them when they constrain what we can see.'
+            }
+        };
+
+        function showSection2() {
+            document.getElementById('section2').classList.remove('hidden');
+            document.getElementById('section2').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showResults() {
+            // Calculate scores
+            const checkboxes = document.querySelectorAll('.pattern-checkbox');
+            const categoryScores = {
+                'A': 0, 'B': 0, 'C': 0, 'D': 0, 
+                'E': 0, 'F': 0, 'G': 0, 'H': 0
+            };
+            let totalChecked = 0;
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.checked) {
+                    const category = checkbox.getAttribute('data-category');
+                    categoryScores[category]++;
+                    totalChecked++;
+                }
+            });
+
+            // Store scores for Section 3
+            window.categoryScores = categoryScores;
+
+            // Calculate overall percentage
+            const overallPercentage = (totalChecked / 48) * 100;
+            
+            // Update overall intensity
+            const marker = document.getElementById('overallMarker');
+            marker.style.left = overallPercentage + '%';
+            
+            const overallMessage = document.getElementById('overallMessage');
+            let messageText = '';
+            let messageColor = '';
+            
+            if (overallPercentage === 0) {
+                messageText = '<p style="margin: 0;"><strong>No patterns selected.</strong> If you didn\'t identify with any of these patterns, that\'s valuable information. You may be approaching this relationship with more objectivity than most.</p>';
+                messageColor = '#0064F0';
+            } else if (overallPercentage <= 20) {
+                messageText = '<p style="margin: 0;"><strong style="color: #228B22;">Minimal Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 48 patterns. You\'re showing relatively few enemyfying patterns, which suggests you may be approaching this relationship with some objectivity.</p>';
+                messageColor = '#228B22';
+            } else if (overallPercentage <= 40) {
+                messageText = '<p style="margin: 0;"><strong style="color: #9ACD32;">Low-Moderate Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 48 patterns. You\'re showing some enemyfying patterns. This is a valuable opportunity to explore how your perceptions might be influencing the dynamic.</p>';
+                messageColor = '#9ACD32';
+            } else if (overallPercentage <= 60) {
+                messageText = '<p style="margin: 0;"><strong style="color: #FFA500;">Moderate Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 48 patterns. Your narrative about this person may be playing a significant role in the adversarial dynamic. There\'s real opportunity for self-reflection here.</p>';
+                messageColor = '#FFA500';
+            } else if (overallPercentage <= 80) {
+                messageText = '<p style="margin: 0;"><strong style="color: #FF6347;">High Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 48 patterns. You\'re showing many enemyfying patterns. The story you\'re telling yourself about this person is likely contributing heavily to the conflict.</p>';
+                messageColor = '#FF6347';
+            } else {
+                messageText = '<p style="margin: 0;"><strong style="color: #DC143C;">Intense Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 48 patterns. You\'re showing strong enemyfying patterns across most categories. The narrative you\'ve constructed is very likely at the heart of this adversarial relationship.</p>';
+                messageColor = '#DC143C';
+            }
+            
+            overallMessage.innerHTML = messageText;
+            overallMessage.style.borderLeft = '4px solid ' + messageColor;
+
+            // Create category breakdown visualization
+            const breakdown = document.getElementById('categoryBreakdown');
+            let breakdownHTML = '';
+            
+            // Sort categories by score (highest first)
+            const sortedCategories = Object.keys(categoryScores).sort((a, b) => 
+                categoryScores[b] - categoryScores[a]
+            );
+            
+            sortedCategories.forEach(catKey => {
+                const score = categoryScores[catKey];
+                const cat = categories[catKey];
+                const percentage = (score / cat.total) * 100;
+                
+                let barColor = '';
+                if (percentage === 0) barColor = '#e0e0e0';
+                else if (percentage <= 33) barColor = '#90EE90';
+                else if (percentage <= 66) barColor = '#FFA500';
+                else barColor = '#DC143C';
+                
+                breakdownHTML += `
+                    <div style="margin-bottom: 25px; padding: 15px; background-color: white; border-radius: 8px; border: 1px solid #ddd;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                            <h4 style="margin: 0; color: #081F5D;">${cat.name}</h4>
+                            <span style="font-weight: 600; color: ${barColor};">${score}/${cat.total}</span>
+                        </div>
+                        <p style="margin: 5px 0 10px 0; font-size: 14px; color: #666; font-style: italic;">${cat.description}</p>
+                        <div style="width: 100%; height: 20px; background-color: #f0f0f0; border-radius: 10px; overflow: hidden;">
+                            <div style="width: ${percentage}%; height: 100%; background-color: ${barColor}; transition: width 0.5s ease;"></div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            breakdown.innerHTML = breakdownHTML;
+
+            // Show results section
+            document.getElementById('resultsSection').classList.remove('hidden');
+            document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showSection3() {
+            // Generate personalized prompts based on top categories
+            const scores = window.categoryScores;
+            
+            // Get top 3 categories (those with scores > 0)
+            const topCategories = Object.keys(scores)
+                .filter(key => scores[key] > 0)
+                .sort((a, b) => scores[b] - scores[a])
+                .slice(0, 3);
+            
+            const promptsContainer = document.getElementById('personalizedPrompts');
+            let promptsHTML = '';
+            
+            if (topCategories.length === 0) {
+                promptsHTML = '<p style="padding: 20px; background-color: #f8f9fa; border-radius: 8px;">You didn\'t identify strongly with any particular patterns. Take a moment to reflect on what a collaborative relationship with this person might look like.</p>';
+            } else {
+                topCategories.forEach((catKey, index) => {
+                    const cat = categories[catKey];
+                    const score = scores[catKey];
+                    
+                    promptsHTML += `
+                        <div style="margin-bottom: 30px; padding: 20px; background-color: white; border-radius: 8px; border: 2px solid #0064F0;">
+                            <div style="background-color: #f0f7ff; padding: 15px; border-radius: 5px; margin-bottom: 15px;">
+                                <h4 style="margin: 0 0 5px 0; color: #081F5D;">Pattern ${index + 1}: ${cat.name}</h4>
+                                <p style="margin: 0; font-size: 14px; color: #666;">You checked ${score} out of ${cat.total} items in this category</p>
+                            </div>
+                            
+                            <label style="display: block; margin-bottom: 10px; font-weight: 600; color: #081F5D;">Reflection Prompt:</label>
+                            <p style="margin-bottom: 15px; font-style: italic; color: #333;">${cat.disruptionPrompt}</p>
+                            
+                            <p style="margin: 10px 0 0 0; font-size: 13px; color: #7f8c8d; font-style: italic;">${cat.disruptionHelper}</p>
+                        </div>
+                    `;
+                });
+            }
+            
+            promptsContainer.innerHTML = promptsHTML;
+
+            document.getElementById('section3').classList.remove('hidden');
+            document.getElementById('section3').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function showConclusion() {
+            document.getElementById('conclusionSection').classList.remove('hidden');
+            document.getElementById('conclusionSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Auto-save functionality for text inputs and checkboxes
+        document.addEventListener('DOMContentLoaded', function() {
+            // Save text inputs
+            const inputs = document.querySelectorAll('input[type="text"], textarea');
+            inputs.forEach(input => {
+                const saved = localStorage.getItem(input.id);
+                if (saved) {
+                    input.value = saved;
+                }
+                
+                input.addEventListener('input', function() {
+                    localStorage.setItem(input.id, this.value);
+                });
+            });
+
+            // Save pattern checkboxes
+            const patternCheckboxes = document.querySelectorAll('.pattern-checkbox');
+            patternCheckboxes.forEach((checkbox, index) => {
+                const saved = localStorage.getItem('pattern-' + index);
+                if (saved === 'true') {
+                    checkbox.checked = true;
+                }
+                
+                checkbox.addEventListener('change', function() {
+                    localStorage.setItem('pattern-' + index, this.checked);
+                });
+            });
+        });
+    </script>
+</body>
+</html>

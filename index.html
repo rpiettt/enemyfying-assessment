@@ -258,8 +258,8 @@
                     <div id="overallMarker" style="position: absolute; top: -5px; width: 4px; height: 50px; background-color: #081F5D; transition: left 0.3s ease; left: 0%;"></div>
                 </div>
                 <div style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 600;">
-                    <span style="color: #228B22;">Minimal</span>
-                    <span style="color: #DC143C;">Intense</span>
+                    <span style="color: #228B22;">Low</span>
+                    <span style="color: #DC143C;">High</span>
                 </div>
                 <div id="overallMessage" style="margin-top: 20px; padding: 15px; background-color: white; border-radius: 5px;"></div>
             </div>
@@ -308,14 +308,11 @@
                     <li><strong>Notice your patterns</strong> - When you catch yourself in one of your enemyfying patterns, simply notice it</li>
                     <li><strong>Ask questions rather than making assumptions; practice empathetic listening</strong></li>
                     <li><strong>Focus on what you can change</strong> - Not on changing them, but on changing your own participation</li>
-                    <li><strong>IF you choose to engage in stretch collaboration, experiment with one small, different action in your next interaction.</strong> Upcoming sessions will introduce additional responses and stretch collaboration practices to try.</li>
                 </ol>
             </div>
 
-            <div style="text-align: center; margin-top: 40px; padding: 30px; background: linear-gradient(135deg, #081F5D, #0064F0); border-radius: 8px; color: white;">
-                <h3 style="margin-top: 0; color: white;">Print/Save Assessment Results</h3>
-                <p style="margin-bottom: 20px; font-size: 16px;">Save your results for future reference.</p>
-                <button onclick="window.print()" style="background-color: white; color: #081F5D; padding: 12px 30px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer; margin: 0 10px;">Print Results</button>
+            <div style="text-align: center; margin-top: 40px;">
+                <button onclick="window.print()" style="background-color: #081F5D; color: white; padding: 15px 40px; border: none; border-radius: 5px; font-size: 16px; font-weight: 600; cursor: pointer;">Print/Save Results</button>
             </div>
         </div>
 
@@ -400,20 +397,14 @@
             if (overallPercentage === 0) {
                 messageText = '<p style="margin: 0;"><strong>No patterns selected.</strong> If you didn\'t identify with any of these patterns, that\'s valuable information. You may be approaching this relationship with more objectivity than most.</p>';
                 messageColor = '#0064F0';
-            } else if (overallPercentage <= 20) {
-                messageText = '<p style="margin: 0;"><strong style="color: #228B22;">Minimal Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. You\'re showing relatively few enemyfying patterns, which suggests you may be approaching this relationship with some objectivity.</p>';
+            } else if (overallPercentage <= 33) {
+                messageText = '<p style="margin: 0;"><strong style="color: #228B22;">Low Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. You\'re showing relatively few enemyfying patterns, which suggests you may be approaching this relationship with some objectivity.</p>';
                 messageColor = '#228B22';
-            } else if (overallPercentage <= 40) {
-                messageText = '<p style="margin: 0;"><strong style="color: #9ACD32;">Low-Moderate Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. You\'re showing some enemyfying patterns. This is a valuable opportunity to explore how your perceptions might be influencing the dynamic.</p>';
-                messageColor = '#9ACD32';
-            } else if (overallPercentage <= 60) {
-                messageText = '<p style="margin: 0;"><strong style="color: #FFA500;">Moderate Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. Your narrative about this person may be playing a significant role in the adversarial dynamic. There\'s real opportunity for self-reflection here.</p>';
+            } else if (overallPercentage <= 66) {
+                messageText = '<p style="margin: 0;"><strong style="color: #FFA500;">Medium Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. It may be worth considering how the narrative you hold affects what feels possible when it comes to engagement or collaboration.</p>';
                 messageColor = '#FFA500';
-            } else if (overallPercentage <= 80) {
-                messageText = '<p style="margin: 0;"><strong style="color: #FF6347;">High Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. You\'re showing many enemyfying patterns. The story you\'re telling yourself about this person is likely contributing heavily to the conflict.</p>';
-                messageColor = '#FF6347';
             } else {
-                messageText = '<p style="margin: 0;"><strong style="color: #DC143C;">Intense Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. You\'re showing strong enemyfying patterns across most categories. The narrative you\'ve constructed is very likely at the heart of this adversarial relationship.</p>';
+                messageText = '<p style="margin: 0;"><strong style="color: #DC143C;">High Enemyfying</strong></p><p style="margin: 5px 0 0 0;">You checked ' + totalChecked + ' out of 15 patterns. It may be worth considering how the narrative you hold affects what feels possible when it comes to engagement or collaboration.</p>';
                 messageColor = '#DC143C';
             }
             
